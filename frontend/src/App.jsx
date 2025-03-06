@@ -4,15 +4,16 @@ import Editor from "./Editor";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <h1>Letter Editor</h1>
-        <Auth />
-        <Routes>
-          <Route path="/editor" element={<Editor />} />
-        </Routes>
-      </div>
-    </Router>
+    <Router basename={process.env.PUBLIC_URL}>
+  <div>
+    <h1>Letter Editor</h1>
+    <Auth />
+    <Routes>
+      <Route path="/editor" element={<Editor />} />
+    </Routes>
+  </div>
+</Router>
+
   );
 }
 
