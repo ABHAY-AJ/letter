@@ -1,0 +1,39 @@
+.editor-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.title-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.editor-content {
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+}
+
+.editor-placeholder {
+  color: #aaa;
+  position: absolute;
+  pointer-events: none;
+  padding: 10px;
+}
+
+.save-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
