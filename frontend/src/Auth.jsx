@@ -1,25 +1,31 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { apiUrl } from "./api";
+import "./Auth.css"; // Import CSS file
 
 export default function Auth() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    axios.get(`${apiUrl}/auth/user`, { withCredentials: true })
-      .then(res => setUser(res.data))
+    axios
+      .get(`${apiUrl}/auth/user`, { withCredentials: true })
+      .then((res) => setUser(res.data))
       .catch(() => setUser(null));
   }, []);
 
   return (
-    <div>
+    <div className="auth-container">
       {user ? (
-        <div>
+        <div className="user-info">
           <h2>Welcome, {user.name}</h2>
-          <a href="http://localhost:5000/auth/logout">Logout</a>
+          <a href="https://letter-w045.onrender.com/auth/logout" className="logout-btn">
+            Logout
+          </a>
         </div>
       ) : (
-        <a href="http://localhost:5000/auth/google">Login with Google</a>
+        <a href="https://letter-w045.onrender.com/auth/google" className="login-btn">
+          Login with Google
+        </a>
       )}
     </div>
   );

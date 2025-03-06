@@ -8,6 +8,8 @@ import { $getRoot } from "lexical";
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 import axios from "axios";
 import { apiUrl } from "./api";
+import "./Editor.css";
+
 
 const theme = {
   paragraph: "editor-paragraph",
