@@ -7,6 +7,7 @@ import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 import { $getRoot } from "lexical";
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 import axios from "axios";
+import { apiUrl } from "./api";
 
 const theme = {
   paragraph: "editor-paragraph",
@@ -26,7 +27,7 @@ function SaveButton({ title }) {
 
       axios
         .post(
-          "http://localhost:5000/letters/save",
+          `${apiUrl}/letters/save`,
           { title, content },
           { withCredentials: true }
         )
